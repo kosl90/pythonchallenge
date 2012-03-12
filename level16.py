@@ -4,9 +4,8 @@ question url: http://www.pythonchallenge.com/pc/return/mozart.html
 answer url: http://www.pythonchallenge.com/pcc/return/romance.html
 '''
 
-p='/home/l/test/'
 import Image
-im = Image.open(p+'level16.d/mozart.gif')
+im = Image.open('level16.d/mozart.gif')
 w, h = im.size
 # print im.mode, im.size
 
@@ -26,4 +25,4 @@ for row in xrange(h):
 #     data[row] = data[row][col:] + data[row][:col]
 
 im.putdata(reduce(lambda x,y: x+y, data))
-im.save(p+'level16.d/res.gif')
+im.save('level16.d/res.gif')
