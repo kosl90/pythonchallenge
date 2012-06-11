@@ -21,7 +21,7 @@ for row in xrange(h):
 
 # better version
 # for row in xrange(h):
-#     col = data[row].index(PINK)
+#     col = data[row].index(PINK)  # there must be PINK every line
 #     data[row] = data[row][col:] + data[row][:col]
 
 im.putdata(reduce(lambda x,y: x+y, data))
