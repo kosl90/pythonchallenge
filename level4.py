@@ -12,10 +12,11 @@ re_match = re.compile(r'\D+(\d+$)').findall  # search is also ok
 # nothing in [12345, 8022]
 nothing = sys.argv[1]
 pre = ''
+url = "http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing="
 
 for i in xrange(400):
     try:
-        f = urllib.urlopen("http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=%s" % nothing)
+        f = urllib.urlopen(url + nothing)
         data = f.read()
         f.close()
         pre = nothing
@@ -33,5 +34,4 @@ for i in xrange(400):
         print e
         break
 
-print 'previous nothing: %s\nprevious data: %s' % \
-    (pre, err_num, data)
+print 'previous nothing: %s\nprevious data: %s' % (pre, data)
