@@ -1,7 +1,9 @@
 #! /usr/bin/env python2.7
 # -*- coding: utf-8 -*-
 '''
+pythonchallenge level 17
 question url: http://www.pythonchallenge.com/pc/return/romance.html
+answer url: http://www.pythonchallenge.com/pcc/return/balloons.html
 '''
 
 import sys
