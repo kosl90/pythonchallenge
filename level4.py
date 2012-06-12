@@ -9,8 +9,9 @@ import sys
 import urllib
 re_match = re.compile(r'\D+(\d+$)').findall  # search is also ok
 
+default_nothing = '12345' if len(sys.argv) == 1 else sys.argv[1]
 # nothing in [12345, 8022]
-nothing = sys.argv[1]
+nothing = default_nothing
 pre = ''
 url = "http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing="
 
