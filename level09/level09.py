@@ -5,7 +5,7 @@ question url: http://www.pythonchallenge.com/pc/return/good.html
 answer url: http://www.pythonchallenge.com/pcc/return/bull.html:huge:file
 '''
 
-from pythonchallenge import pjoin
+from .. import pjoin
 
 import Image
 import ImageDraw

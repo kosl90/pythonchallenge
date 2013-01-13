@@ -5,7 +5,7 @@ question url: http://www.pythonchallenge.com/pc/def/channel.html
 answer url: http://www.pythonchallenge.com/pcc/def/oxygen.html
 '''
 
-from pythonchagllenge import pjoin
+from .. import pjoin
 
 # zipfile and string version
 import zipfile

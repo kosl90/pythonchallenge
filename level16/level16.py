@@ -5,7 +5,7 @@ question url: http://www.pythonchallenge.com/pc/return/mozart.html
 answer url: http://www.pythonchallenge.com/pcc/return/romance.html
 '''
 
-from pythonchallenge import pjoin
+from .. import pjoin
 
 import Image
 im = Image.open(pjoin('mozart.gif'))

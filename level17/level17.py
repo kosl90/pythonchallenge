@@ -6,7 +6,7 @@ question url: http://www.pythonchallenge.com/pc/return/romance.html
 answer url: http://www.pythonchallenge.com/pcc/return/balloons.html
 '''
 
-from pythonchallenge import pjoin
+from .. import pjoin
 import sys
 import os
 

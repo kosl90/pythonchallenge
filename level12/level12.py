@@ -5,7 +5,7 @@ question url: http://www.pythonchallenge.com/pc/return/evil.html
 answer url: http://www.pythonchallenge.com/pcc/return/disproportional.html
 '''
 
-from pythonchallenge import pjoin
+from .. import pjoin
 
 f = open(pjoin('evil2.gfx'),'rb')
 content = f.read()

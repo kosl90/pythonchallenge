@@ -5,7 +5,7 @@ url: http://www.pythonchallenge.com/pc/def/oxygen.html
 answer url: http://www.pythonchallenge.com/pcc/def/integrity.html
 '''
 
-from pythonchallenge import pjoin
+from .. import pjoin
 
 import Image
 im = Image.open(pjoin('oxygen.png'))

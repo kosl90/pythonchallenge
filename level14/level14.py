@@ -5,7 +5,7 @@ question url: http://www.pythonchallenge.com/pc/return/italy.html
 answer url: http://www.pythonchallenge.com/pcc/return/uzi.html
 '''
 
-from pythonchallenge import pjoin
+from .. import pjoin
 
 l = [[i, i - 1 , i - 1, i - 2] for i in xrange(100, 1, -2)]
 l = reduce(lambda x, y: x+y, l)

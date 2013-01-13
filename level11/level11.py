@@ -5,7 +5,7 @@ question url: http://www.pythonchallenge.com/pc/return/5808.html
 answer url: http://www.pythonchallenge.com/pcc/return/evil.html
 '''
 
-from pythonchallenge import pjoin
+from .. import pjoin
 
 import Image
 im = Image.open(pjoin("cave.jpg"))
