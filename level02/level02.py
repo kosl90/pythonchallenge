@@ -1227,18 +1227,32 @@ $#_}*!(+([_&%{^&[([%]}*^{{([@+@]@*&@_!]_+([(#&!]]#$$#]@#{_]][_{@]{*))$({%}_![@$]
 #@}&$[[%]_&$+)$!%{(}$^$}*'''
 
 # version1
-s = ''
-for i in text:
-    if i.isalpha():
-        s += i
-print s
+def v1():
+    s = ''
+    for i in text:
+        if i.isalpha():
+            s += i
+    print s
 
 # version2
-print ''.join([x for x in text if x.isalpha()])
+def v2():
+    print ''.join([x for x in text if x.isalpha()])
 
 # version3
 import re
-print ''.join(re.findall(r'[a-z]+', text, re.I))
+def v3():
+    print ''.join(re.findall(r'[a-z]+', text, re.I))
 
 # version4
-print re.sub(r'[^a-z]', '', text)
+def v4():
+    print re.sub(r'[^a-z]', '', text)
+
+
+def main():
+    v1()
+    v2()
+    v3()
+    v4()
+
+if __name__ == '__main__':
+    main()

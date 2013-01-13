@@ -5,20 +5,26 @@ question url: http://www.pythonchallenge.com/pc/return/bull.html
 answer url: http://www.pythonchallenge.com/pcc/return/5808.html
 '''
 
-a = '1'
-for i in xrange(30):
-    pos = 0
-    tmp = ''
-    str_len = len(a)
-    while pos < str_len:
-        count = 1
-        while pos + 1 < str_len and a[pos] == a[pos+1]:
-            count += 1
+
+def main():
+    a = '1'
+    for i in xrange(30):
+        pos = 0
+        tmp = ''
+        str_len = len(a)
+        while pos < str_len:
+            count = 1
+            while pos + 1 < str_len and a[pos] == a[pos+1]:
+                count += 1
+                pos += 1
+
+            tmp += '%d%s' % (count, a[pos])
             pos += 1
 
-        tmp += '%d%s' % (count, a[pos])
-        pos += 1
+        a = tmp
 
-    a = tmp
+    print len(a)
 
-print len(a)
+
+if __name__ == '__main__':
+    main()

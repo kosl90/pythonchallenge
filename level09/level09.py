@@ -9,7 +9,6 @@ from .. import pjoin
 
 import Image
 import ImageDraw
-im = Image.open(pjoin("good.jpg"))
 
 first_set = [146,399,163,403,170,393,169,391,166,386,170,381,170,371,170,355,169,346,167,335,170,329,170,320,170,
 310,171,301,173,290,178,289,182,287,188,286,190,286,192,291,194,296,195,305,194,307,191,312,190,316,
@@ -36,9 +35,16 @@ second_set = [156,141,165,135,169,131,176,130,187,134,191,140,191,146,186,150,17
 77,155,81,148,87,140,96,138,105,141,110,136,111,126,113,129,118,117,128,114,137,115,146,114,155,115,
 158,121,157,128,156,134,157,136,156,136]
 
-nim = Image.new(im.mode, im.size)
-draw = ImageDraw.Draw(nim)
-draw.line(first_set, fill='#fff')
-draw.line(second_set, fill='#fff')
-del draw
-nim.save(pjoin('level9_result.png'))
+
+def main():
+    im = Image.open(pjoin("good.jpg"))
+    nim = Image.new(im.mode, im.size)
+    draw = ImageDraw.Draw(nim)
+    draw.line(first_set, fill='#fff')
+    draw.line(second_set, fill='#fff')
+    del draw
+    nim.save(pjoin('level9_result.png'))
+
+
+if __name__ == '__main__':
+    main()

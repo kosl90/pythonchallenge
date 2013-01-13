@@ -4,4 +4,10 @@
 question url: http://www.pythonchallenge.com/pc/def/map.html
 answer url: http://www.pythonchallenge.com/pcc/def/map.html
 '''
-print 2 ** 38
+
+def main():
+    print 2 ** 38
+
+
+if __name__ == '__main__':
+    main()

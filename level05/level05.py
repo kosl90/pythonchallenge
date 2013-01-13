@@ -6,7 +6,8 @@ answer url: http://www.pythonchallenge.com/pcc/def/channel.html
 '''
 
 import pickle
-info = pickle.loads('''(lp1
+
+content = '''(lp1
 (lp1
 (S' '
 p2
@@ -1077,8 +1078,16 @@ aa(lp372
 I95
 tp373
 aa.
-''')
-for line in info:
-    #print ''.join(map(lambda i:i[0]*i[1], line))
-    print ''.join([x[0] * x[1] for x in line])
+'''
 
+
+def main():
+    global content
+    info = pickle.loads(content)
+    for line in info:
+        #print ''.join(map(lambda i:i[0]*i[1], line))
+        print ''.join([x[0] * x[1] for x in line])
+
+
+if __name__ == '__main__':
+    main()
