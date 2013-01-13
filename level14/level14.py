@@ -5,7 +5,9 @@ question url: http://www.pythonchallenge.com/pc/return/italy.html
 answer url: http://www.pythonchallenge.com/pcc/return/uzi.html
 '''
 
-from .. import pjoin
+from os.path import dirname, join as pjoin
+DATA_DIR = pjoin(dirname(__file__), 'data')
+
 import Image
 
 def main():
@@ -13,7 +15,7 @@ def main():
     l = reduce(lambda x, y: x+y, l)
     # print l, len(l)
 
-    w = Image.open(pjoin('wire.png'))
+    w = Image.open(pjoin(DATA_DIR, 'wire.png'))
     w_data = list(w.getdata())
     res = Image.new(w.mode, (100, 100))
     res_data = res.load()
@@ -44,7 +46,7 @@ def main():
 
         v = (v + 1) % 4  # j + 1 if j != 4 else 0
 
-    res.save(pjoin('res.png'))
+    res.save(pjoin(DATA_DIR, 'res.png'))
 
 
 if __name__ == '__main__':

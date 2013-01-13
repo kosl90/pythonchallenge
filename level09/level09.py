@@ -5,7 +5,9 @@ question url: http://www.pythonchallenge.com/pc/return/good.html
 answer url: http://www.pythonchallenge.com/pcc/return/bull.html:huge:file
 '''
 
-from .. import pjoin
+from os.path import dirname, join as pjoin
+
+DATA_DIR = pjoin(dirname(__file__), 'data')
 
 import Image
 import ImageDraw
@@ -37,13 +39,13 @@ second_set = [156,141,165,135,169,131,176,130,187,134,191,140,191,146,186,150,17
 
 
 def main():
-    im = Image.open(pjoin("good.jpg"))
+    im = Image.open(pjoin(DATA_DIR, "good.jpg"))
     nim = Image.new(im.mode, im.size)
     draw = ImageDraw.Draw(nim)
     draw.line(first_set, fill='#fff')
     draw.line(second_set, fill='#fff')
     del draw
-    nim.save(pjoin('level9_result.png'))
+    nim.save(pjoin(DATA_DIR, 'res.png'))
 
 
 if __name__ == '__main__':

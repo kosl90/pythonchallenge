@@ -6,7 +6,8 @@ question url: http://www.pythonchallenge.com/pc/return/romance.html
 answer url: http://www.pythonchallenge.com/pcc/return/balloons.html
 '''
 
-from .. import pjoin
+from os.path import dirname, join as pjoin
+DATA_DIR = pjoin(dirname(__file__), 'data')
 import sys
 import os
 import re
@@ -31,7 +32,7 @@ def main():
         info = cookie.split(';')[0]
         return(info.split('=')[1])
 
-    info_file = pjoin('info')
+    info_file = pjoin(DATA_DIR, 'info')
     if os.path.exists(info_file):
         f = open(info_file)
         print f.read()

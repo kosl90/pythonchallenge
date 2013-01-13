@@ -5,13 +5,14 @@ question url: http://www.pythonchallenge.com/pc/return/mozart.html
 answer url: http://www.pythonchallenge.com/pcc/return/romance.html
 '''
 
-from .. import pjoin
+from os.path import dirname, join as pjoin
+DATA_DIR = pjoin(dirname(__file__), 'data')
 
 import Image
 
 
 def main():
-    im = Image.open(pjoin('mozart.gif'))
+    im = Image.open(pjoin(DATA_DIR, 'mozart.gif'))
     w, h = im.size
     # print im.mode, im.size
 
@@ -31,7 +32,7 @@ def main():
     #     data[row] = data[row][col:] + data[row][:col]
 
     im.putdata(reduce(lambda x,y: x+y, data))
-    im.save(pjoin('res.gif'))
+    im.save(pjoin(DATA_DIR, 'res.gif'))
 
 
 if __name__ == '__main__':

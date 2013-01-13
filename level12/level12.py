@@ -5,16 +5,17 @@ question url: http://www.pythonchallenge.com/pc/return/evil.html
 answer url: http://www.pythonchallenge.com/pcc/return/disproportional.html
 '''
 
-from .. import pjoin
+from os.path import dirname, join as pjoin
 
+DATA_DIR = pjoin(dirname(__file__), 'data')
 
 def main():
-    f = open(pjoin('evil2.gfx'),'rb')
+    f = open(pjoin(DATA_DIR, 'evil2.gfx'),'rb')
     content = f.read()
     f.close()
 
     for i in xrange(5):
-        f = open(pjoin('%d' % i), 'wb')
+        f = open(pjoin(DATA_DIR, '%d' % i), 'wb')
         f.write(content[i::5])
         f.close()
 

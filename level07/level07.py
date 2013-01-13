@@ -5,13 +5,15 @@ url: http://www.pythonchallenge.com/pc/def/oxygen.html
 answer url: http://www.pythonchallenge.com/pcc/def/integrity.html
 '''
 
-from .. import pjoin
+from os.path import dirname, join as pjoin
+
+DATA_DIR = pjoin(dirname(__file__), 'data')
 
 import Image
 
 
 def main():
-    im = Image.open(pjoin('oxygen.png'))
+    im = Image.open(pjoin(DATA_DIR, 'oxygen.png'))
 
     # get the width and length of the wired bar and step via GIMP
     # x_begin, x_end = 0, 609
