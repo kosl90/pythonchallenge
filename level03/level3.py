@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+# -*- coding: utf-8 -*-
 '''python challenge level 3
 question url: www.pythonchallenge.com/pc/def/equality.html
 answer url: http://www.pythonchallenge.com/pcc/def/linkedlist.html

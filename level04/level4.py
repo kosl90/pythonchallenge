@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+# -*- coding: utf-8 -*-
 '''python challenge level 4
 question url: http://www.pythonchallenge.com/pc/def/linkedlist.php
 answer url: http://www.pythonchallenge.com/pcc/def/peak.html

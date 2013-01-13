@@ -1,15 +1,18 @@
 #! /usr/bin/env python
+# -*- coding: utf-8 -*-
 '''python challenge level 14
 question url: http://www.pythonchallenge.com/pc/return/italy.html
 answer url: http://www.pythonchallenge.com/pcc/return/uzi.html
 '''
+
+from pythonchallenge import pjoin
 
 l = [[i, i - 1 , i - 1, i - 2] for i in xrange(100, 1, -2)]
 l = reduce(lambda x, y: x+y, l)
 # print l, len(l)
 
 import Image
-w = Image.open('level14.d/wire.png')
+w = Image.open(pjoin('wire.png'))
 w_data = list(w.getdata())
 res = Image.new(w.mode, (100, 100))
 res_data = res.load()
@@ -40,4 +43,4 @@ for times in l:
 
     v = (v + 1) % 4  # j + 1 if j != 4 else 0
 
-res.save('level14.d/res.png')
+res.save(pjoin('res.png'))

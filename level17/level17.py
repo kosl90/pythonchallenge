@@ -6,6 +6,7 @@ question url: http://www.pythonchallenge.com/pc/return/romance.html
 answer url: http://www.pythonchallenge.com/pcc/return/balloons.html
 '''
 
+from pythonchallenge import pjoin
 import sys
 import os
 
@@ -14,7 +15,7 @@ def call(name):
     xmlrpc = xmlrpclib.ServerProxy("http://www.pythonchallenge.com/pc/phonebook.php")
     return xmlrpc.phone(name)
 
-info_file = 'level17.d/info'
+info_file = pjoin('info')
 if os.path.exists(info_file):
     f = open(info_file)
     print f.read()

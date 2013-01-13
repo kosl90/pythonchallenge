@@ -1,11 +1,14 @@
 #! /usr/bin/env python
+# -*- coding: utf-8 -*-
 '''python challenge level 11
 question url: http://www.pythonchallenge.com/pc/return/5808.html
 answer url: http://www.pythonchallenge.com/pcc/return/evil.html
 '''
 
+from pythonchallenge import pjoin
+
 import Image
-im = Image.open("level11.d/cave.jpg")
+im = Image.open(pjoin("cave.jpg"))
 w, h = im.size
 # print w, h 
 
@@ -19,4 +22,4 @@ for i in xrange(w):
         new_pos = (i // 2, j // 2)
         imgs_load[i % 2 + j % 2 * 2 ][new_pos] = org[org_pos]
 
-[imgs[i].save('level11.d/%d.png' % i) for i in xrange(4)]
+[imgs[i].save(pjoin('%02d.png' % i)) for i in xrange(4)]

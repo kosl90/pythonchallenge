@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+# -*- coding: utf-8 -*-
 '''question url: http://www.pythonchallenge.com/pc/return/uzi.html
 answer url: http://www.pythonchallenge.com/pcc/return/mozart.html
 '''

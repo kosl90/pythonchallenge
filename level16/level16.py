@@ -1,11 +1,14 @@
 #! /usr/bin/env python
+# -*- coding: utf-8 -*-
 '''python challenge level 16
 question url: http://www.pythonchallenge.com/pc/return/mozart.html
 answer url: http://www.pythonchallenge.com/pcc/return/romance.html
 '''
 
+from pythonchallenge import pjoin
+
 import Image
-im = Image.open('level16.d/mozart.gif')
+im = Image.open(pjoin('mozart.gif'))
 w, h = im.size
 # print im.mode, im.size
 
@@ -25,4 +28,4 @@ for row in xrange(h):
 #     data[row] = data[row][col:] + data[row][:col]
 
 im.putdata(reduce(lambda x,y: x+y, data))
-im.save('level16.d/res.gif')
+im.save(pjoin('res.gif'))

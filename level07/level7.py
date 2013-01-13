@@ -1,11 +1,14 @@
 #! /usr/bin/env python
+# -*- coding: utf-8 -*-
 '''python challenge level 7
 url: http://www.pythonchallenge.com/pc/def/oxygen.html
 answer url: http://www.pythonchallenge.com/pcc/def/integrity.html
 '''
 
+from pythonchallenge import pjoin
+
 import Image
-im = Image.open('level7.d/oxygen.png')
+im = Image.open(pjoin('oxygen.png'))
 
 # get the width and length of the wired bar and step via GIMP
 # x_begin, x_end = 0, 609

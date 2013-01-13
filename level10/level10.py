@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+# -*- coding: utf-8 -*-
 '''python challenge level 10
 question url: http://www.pythonchallenge.com/pc/return/bull.html
 answer url: http://www.pythonchallenge.com/pcc/return/5808.html

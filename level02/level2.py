@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+# -*- coding: utf-8 -*-
 '''python challenge level 2
 question url: http://www.pythonchallenge.com/pc/def/ocr.html
 answer url: www.pythonchallenge.com/pcc/def/equality.html
