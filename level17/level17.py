@@ -37,12 +37,14 @@ def main():
         f = open(info_file)
         print f.read()
         f.close()
+        print 'call...'
         print call('Leopold')
 
         import urllib2
         url = 'http://www.pythonchallenge.com/pc/stuff/violin.php'
         info = 'the flowers are on their way'
         req = urllib2.Request(url, headers={'Cookie': 'info='+info})
+        print 'read request...'
         print urllib2.urlopen(req).read()
         sys.exit(0)
 
